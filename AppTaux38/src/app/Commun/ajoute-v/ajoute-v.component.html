@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-header">Creation Todo Prof</div>
+  <div class="card-body">
+    <div class="form-group">
+      <label for="description">CODE</label>
+      <input id="description" type="text" class="form-control" [(ngModel)]="Ville.code" >
+
+    </div>
+    <div class="form-group">
+      <label for="isDone">LIBELLE</label>
+      <input id="isDone" type="text" class="form-control" [(ngModel)]="Ville.libelle" >
+    </div>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-success" (click)="save()" routerLink="/ville">Valider</button>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="card">
+  <div class="card-header">
+    Liste des Villes
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Code</th>
+        <th>Libellé</th>
+        <th>Action</th> <!-- Modifier "Delete" en "Action" pour inclure d'autres actions -->
+      </tr>
+      </thead>
+      <tbody>
+
+        @for (item of Villes ; track $index){
+
+<tr>
+  <td>{{ item.id }}</td>
+  <td>{{ item.code }}</td>
+  <td>{{ item.libelle }}</td>
+  <td>
+    <button class="btn btn-outline-danger" (click)="handleDeleteVille(item , $index)"><i class="bi bi-trash"></i></button>
+
+  </td>
+</tr>
+
+        }
+
+
+      </tbody>
+    </table>
+  </div>
+</div>
